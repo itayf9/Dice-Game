@@ -1,0 +1,87 @@
+body
+{
+    margin: 0;
+}
+
+h1
+{
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.header
+{
+    margin: 0;
+    background: #9365a1;
+
+}
+
+.instruction
+{
+    text-align: center;
+}
+
+.placeOfDice
+{
+    background: yellow;
+    height: auto;
+    width: auto;
+}
+
+.diceImg
+{
+    position: relative;
+    height: 200px;
+    width: 200px;
+}
+
+.firstDice
+{
+    background: blue;
+    left:20%;
+}
+
+.secondDice
+{
+    background: red;
+    left: 50%;
+}
+
+.placeOfRoll
+{
+    background: pink;
+
+}
+
+.roll
+{
+    display: block;
+    margin: 30px auto auto auto;
+    width: 50%;
+    background-color: darkorchid;
+    color: purple;
+    font-size: 20pt;
+}
+
+.roll:hover
+{
+    color: hotpink;
+    background-color:#45165c;
+}
+
+.roll:active
+{
+    color: red;
+}
+
+@media (max-width: 600px) {
+    .firstDice
+    {
+        width: 20%;
+    }
+
+    .secondDice
+    {
+        width: 20%;
+    }
+}
