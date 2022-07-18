@@ -1,4 +1,6 @@
-document.querySelector("button").addEventListener("click", function()
+var isStatic= false;
+
+document.querySelector(".roll").addEventListener("click", function()
 {
     var randRoll1= Math.random() * 6 + 1;
     var randRoll2= Math.random() * 6 + 1;
@@ -11,30 +13,55 @@ document.querySelector("button").addEventListener("click", function()
 
     document.querySelector(".scoreResults").innerHTML= randRoll1+ " - " + randRoll2;
 
-    var randRollDeg1= Math.floor(Math.random()*100 +1);
-    var randRollDeg2= Math.floor(Math.random()*100 +1);
-
-    var firstDice= document.querySelector(".firstDice");
-    var secondDice= document.querySelector(".secondDice");
-
-    firstDice.setAttribute("style", "--rollDeg: " +randRollDeg1+ "deg");
-    secondDice.setAttribute("style", "--rollDeg2: " +randRollDeg2+ "deg");
-
-
-
-    if (firstDice.classList.contains("diceA"))
+    if (!isStatic)
     {
-        firstDice.classList.toggle("diceA");
-        secondDice.classList.toggle("diceB");
+        var randRollDeg1= Math.floor(Math.random()*100 +1);
+        var randRollDeg2= Math.floor(Math.random()*100 +1);
+
+        var firstDice= document.querySelector(".firstDice");
+        var secondDice= document.querySelector(".secondDice");
+
+        firstDice.setAttribute("style", "--rollDeg: " +randRollDeg1+ "deg");
+        secondDice.setAttribute("style", "--rollDeg2: " +randRollDeg2+ "deg");
+
+        firstDice.classList.add("diceA");
+        secondDice.classList.add("diceB");
     }
-    else
+
+});
+
+var select= document.querySelectorAll(".selectStaticDynamic");
+for (var i=0; i<select.length; i++)
+{
+    select[i].addEventListener("click", function()
     {
-        firstDice.classList.toggle("diceA");
-        secondDice.classList.toggle("diceB");
-    }
-    firstDice.classList.add("diceA");
-    secondDice.classList.add("diceB");
+        if (this.classList.contains("disabledSelect"))
+        {
+            if (this.textContent=== "static mode")
+            {
+                isStatic= true;
+                var firstDice= document.querySelector(".firstDice");
+                var secondDice= document.querySelector(".secondDice");
+                firstDice.setAttribute("style", "--rollDeg: 0");
+                secondDice.setAttribute("style", "--rollDeg2: 0");
+                firstDice.classList.add("diceA");
+                secondDice.classList.add("diceB");
+            }
+            else
+            {
+                isStatic= false;
+            }
+
+            var currentEnabledSelect= document.querySelector(".enabledSelect");
+            currentEnabledSelect.classList.remove("enabledSelect");
+            currentEnabledSelect.classList.add("disabledSelect");
+            this.classList.add("enabledSelect");
+            this.classList.remove("disabledSelect");
+        }
+
+
+    });
+}
 
 
 
-})
