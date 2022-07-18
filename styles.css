@@ -1,9 +1,16 @@
 body
 {
     margin: 0;
+    --sizeOfDice: 10%;
 }
 
 h1
+{
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+p
 {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -18,39 +25,72 @@ h1
 
 .instruction
 {
+    padding-top: 10%;
+    font-size: 30pt;
     text-align: center;
 }
 
 .placeOfDice
 {
     background: yellow;
+    padding: 2%;
     height: auto;
     width: auto;
+    position: relative;
+    text-align: center;
+}
+
+.scoreResults
+{
+    font-family: Arial, sans-serif;
 }
 
 .diceImg
 {
-    position: relative;
-    height: 200px;
-    width: 200px;
+    margin: 2% 0 2% 0;
+    height: var(--sizeOfDice);
+    width: var(--sizeOfDice);
+}
+
+.diceHolder
+{
+    width: 100%;
+    background-color: red;
+    margin: auto;
+}
+
+.diceA
+{
+    transform: rotate(var(--rollDeg));
+    transition-duration: 1s;
+}
+
+.diceB
+{
+    transform: rotate(var(--rollDeg2));
+    transition-duration: 0.4s;
 }
 
 .firstDice
 {
-    background: blue;
-    left:20%;
+    background: none;
+    margin-right: 3%;
+    --rollDeg: 0;
+
 }
 
 .secondDice
 {
-    background: red;
-    left: 50%;
+    background: none;
+    --rollDeg2: 0;
+
 }
 
 .placeOfRoll
 {
     background: pink;
-
+    padding: 30px;
+    padding-bottom: 50px;
 }
 
 .roll
@@ -61,6 +101,8 @@ h1
     background-color: darkorchid;
     color: purple;
     font-size: 20pt;
+    border-width: 0;
+    font-family: Arial, sans-serif;
 }
 
 .roll:hover
@@ -74,14 +116,19 @@ h1
     color: red;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 450px) {
     .firstDice
     {
+        display: block;
         width: 20%;
+        margin: auto;
     }
 
     .secondDice
     {
+        display: block;
         width: 20%;
+        margin: auto;
     }
 }
+
