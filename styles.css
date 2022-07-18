@@ -1,19 +1,23 @@
 body
 {
     margin: 0;
+    font-family: Arial, sans-serif;
     --sizeOfDice: 10%;
+    background-color: #AA7A9A;
 }
 
 h1
 {
     font-family: Arial, sans-serif;
     margin: 0;
+    text-shadow: 1px 1px #453455;
 }
 
 p
 {
     font-family: Arial, sans-serif;
     margin: 0;
+    font-size: 200%;
 }
 
 .header
@@ -25,14 +29,17 @@ p
 
 .instruction
 {
-    padding-top: 10%;
-    font-size: 30pt;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    size: 30pt;
     text-align: center;
+    margin: auto;
+    width: 50%;
 }
 
 .placeOfDice
 {
-    background: yellow;
+    background: #ededdf;
     padding: 2%;
     height: auto;
     width: auto;
@@ -40,9 +47,22 @@ p
     text-align: center;
 }
 
+.info
+{
+    display: inline-block;
+}
+
 .scoreResults
 {
     font-family: Arial, sans-serif;
+    display: inline-block;
+    margin-right: 10%;
+}
+
+.sumResults
+{
+    font-family: Arial, sans-serif;
+    display: inline-block;
 }
 
 .diceImg
@@ -55,7 +75,6 @@ p
 .diceHolder
 {
     width: 100%;
-    background-color: red;
     margin: auto;
 }
 
@@ -74,7 +93,7 @@ p
 .firstDice
 {
     background: none;
-    margin-right: 3%;
+    margin-right: 7%;
     --rollDeg: 0;
 
 }
@@ -88,37 +107,47 @@ p
 
 .placeOfRoll
 {
-    background: pink;
-    padding: 30px;
-    padding-bottom: 50px;
+    background: #AA7A9A;
+    padding:  30px 2% 50px 2%;
+    margin: 0;
+    width: 96%;
 }
 
 .roll
 {
     display: block;
-    margin: 30px auto auto auto;
-    width: 50%;
-    background-color: darkorchid;
+    margin: 30px auto 5px auto;
+    width: 30%;
+    background-color: #9365a1;
     color: purple;
-    font-size: 20pt;
+    font-size: 40pt;
     border-width: 0;
     font-family: Arial, sans-serif;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    padding: 20px 0 20px 0;
+    transition-duration: 0.4s;
 }
 
 .roll:hover
 {
     color: hotpink;
     background-color:#45165c;
+    transition-duration: 0.4s;
 }
 
 .roll:active
 {
     color: red;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
 }
 
 .selectStaticDynamic
 {
     background-color: darkslateblue;
+    border-width: 0;
+    padding: 10px;
     float: left;
 }
 
@@ -131,7 +160,7 @@ p
 
 .selectStaticDynamic:active
 {
-    background-color: #3e8e41;
+    background-color:#9365a1;
 }
 
 .disabledSelect

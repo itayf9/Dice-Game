@@ -13,6 +13,9 @@ document.querySelector(".roll").addEventListener("click", function()
 
     document.querySelector(".scoreResults").innerHTML= randRoll1+ " - " + randRoll2;
 
+    document.querySelector(".sumResults").innerHTML=  "" + (randRoll1 + randRoll2);
+
+
     if (!isStatic)
     {
         var randRollDeg1= Math.floor(Math.random()*100 +1);
