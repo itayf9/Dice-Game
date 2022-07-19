@@ -31,7 +31,7 @@ p
 {
     padding-top: 20px;
     padding-bottom: 20px;
-    size: 30pt;
+    font-size: 40pt;
     text-align: center;
     margin: auto;
     width: 50%;
@@ -50,13 +50,14 @@ p
 .info
 {
     display: inline-block;
+    font-size: 3vw;
 }
 
 .infoLine
 {
     display: block;
     text-align: left;
-    margin: auto;
+    margin: auto 0;
     width: 30%;
 }
 
@@ -65,12 +66,14 @@ p
     font-family: Arial, sans-serif;
     display: inline-block;
     margin-right: 10%;
+    font-size: 3vw;
 }
 
 .sumResults
 {
     font-family: Arial, sans-serif;
     display: inline-block;
+    font-size: 3vw;
 }
 
 .diceImg
@@ -116,7 +119,7 @@ p
 .placeOfRoll
 {
     background: #AA7A9A;
-    padding:  30px 2% 50px 2%;
+    padding:  25px 2% 50px 2%;
     margin: 0;
     width: 96%;
 }
@@ -182,18 +185,68 @@ p
 }
 
 @media (max-width: 450px) {
+    .scoreResults
+    {
+        text-align: center;
+        font-size: 15pt;
+    }
+
+    .sumResults
+    {
+        text-align: center;
+        font-size: 15pt;
+    }
+
+    .info
+    {
+        text-align: center;
+        font-size: 15pt;
+    }
+
+    .infoLine
+    {
+        display: block;
+        text-align: center;
+        margin: auto;
+        width: 30%;
+    }
+
+    .instruction
+    {
+        font-size: 9vw;
+    }
+
     .firstDice
     {
         display: block;
         width: 20%;
-        margin: auto;
+        margin: 10px auto 20px auto;
     }
 
     .secondDice
     {
         display: block;
         width: 20%;
-        margin: auto;
+        margin: 20px auto 10px auto;
+    }
+
+    .selectStaticDynamic
+    {
+        float: bottom;
+        width: 50%;
+        margin: 30px auto;
+        padding: 10px 0;
+    }
+
+    .roll
+    {
+        font-size: 8vw;
+    }
+
+    .placeOfRoll
+    {
+        padding-top: 1px;
+        text-align: center;
     }
 }
 
