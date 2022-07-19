@@ -17,7 +17,7 @@ p
 {
     font-family: Arial, sans-serif;
     margin: 0;
-    font-size: 200%;
+    font-size: 30px;
 }
 
 .header
@@ -50,6 +50,14 @@ p
 .info
 {
     display: inline-block;
+}
+
+.infoLine
+{
+    display: block;
+    text-align: left;
+    margin: auto;
+    width: 30%;
 }
 
 .scoreResults
